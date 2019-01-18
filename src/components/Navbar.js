@@ -1,0 +1,43 @@
+import React, { Component } from 'react'
+import {Link} from 'react-router-dom';
+import logo from '../logo.svg';
+import {ButtonContainer} from './Button';
+import styled from 'styled-components';
+
+export default class Navbar extends Component {
+  render() {
+    return (
+      <React.Fragment>
+        <NavWrapper className="navbar navbar-expand-sm navbar-dark px-sm-5">
+          <Link to="/">
+            {/* 
+              https://www.iconfinder.com/icons/1243689/call_phone_icon
+              Creative Commons (Attribution 3.0 Unported);
+              https://www.iconfinder.com/Makoto_msk*/}
+
+            <img src={logo} alt="store" className="navbar-brand"/>
+          </Link>
+          <ul className="navbar-nav align-items-center">
+              <li className="nav-item ml-5">
+                <Link to="/" className="nav-link text-capitalize">
+                    products
+                </Link>
+              </li>
+          </ul>
+          <Link to="/cart" className="ml-auto">
+              <ButtonContainer>
+                <i className="fas fa-cart-plus mr-2"></i>
+                my cart
+              </ButtonContainer>
+          </Link>
+        </NavWrapper>
+      </React.Fragment>
+    )
+  }
+}
+ 
+const NavWrapper = styled.nav`
+  background: var(--mainBlue);
+  text-transform: capitalize;
+  font-size: 1.5rem;
+`;
