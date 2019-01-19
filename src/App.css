@@ -16,3 +16,15 @@ body{
 .text-bright{
     color : var(--lightBlue) !important;
 }
+.btn-black{
+    background: transparent;
+    text-transform: capitalize;
+    font-size: .8rem !important;
+    color : var(--mainDark);
+    border-radius: 0 !important;
+    border : .1rem solid var(--mainDark) !important;
+}
+.cart-icon{
+    color: var(--mainYellow);
+    cursor : pointer;
+}
